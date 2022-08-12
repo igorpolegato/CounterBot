@@ -1,0 +1,11 @@
+.env
+*vscode*
+*cache*
+*.session*
+*msgs*
+*test*
+*pylint*
+*build*
+*dist*
+*.spec
+*.ini
