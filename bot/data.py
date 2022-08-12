@@ -23,6 +23,7 @@ for u in msgens['users'].split(","):
 
 lk_ignore = ignorar
 
-perm_users = map(int, usuarios)
+perm_users = list(map(int, usuarios))
 gp_id = int(msgens['grupo'])
-mx_range = int(msgens['range'])
+min_range = int(msgens['min'])
+max_range = int(msgens['max'])

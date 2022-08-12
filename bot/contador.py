@@ -77,9 +77,13 @@ def interact(bot, mensagem):
 def contar(user_id):
     count = {}
     msgs = []
-    for i in genRange(30000, mx_range):
-        print(i)
+    n = 0
+    print(f"Intervalo definido entre {min_range} e {max_range}\n")
+    for i in genRange(min_range, max_range):
         msgs.append(app.get_messages(gp_id, i))
+        if i % 100 == 0:
+            print(str(n) + " mensagens analizadas!\nFaltam " + str(max_range - i) + "\n")
+            n += 100
     text = "Essas foram a quantidade de mensagens que cada usuário enviou neste período:\n\n"
     for msg in msgs:
         author = msg.author_signature
